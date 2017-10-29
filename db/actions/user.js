@@ -2,6 +2,8 @@
 
 const model = require('../model');
 
+//force: true means create a new table even if it already exsits
+
 function fillTable(userData, doneCallback) {
     model.user.sync({force: false}).then(function() {
         // Table created
