@@ -51,9 +51,17 @@ var User = sequelize.define('user', {
     }
 });
 
-
+var Shopping = sequelize.define('shopping', {
+    item: {
+        type: Sequelize.STRING
+    },
+    price: {
+        type: Sequelize.INTEGER
+    }
+});
 
 module.exports = {
     connection : connectionStart,
-    user : User
+    user : User,
+    shopping : Shopping
 };
